@@ -1,16 +1,9 @@
-<template>
-    <v-app>
-        <v-container>
-            <v-btn>Click Me!</v-btn>
-        </v-container>
-    </v-app>
-</template>
+<script setup>
+import AppLayout from "@/Layouts/AppLayout.vue";
 
-<script>
-export default {
-    data() {
-        return {
-        }
-    }
-}
 </script>
+<template>
+    <AppLayout>
+        asd
+    </AppLayout>
+</template>
