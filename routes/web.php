@@ -23,11 +23,15 @@ Route::get('/', function () {
         'laravelVersion' => Application::VERSION,
         'phpVersion' => PHP_VERSION,
     ]);
-});
+})->name('home');
 
-Route::get('/events', function () {
+Route::middleware('auth')->get('/events', function () {
     return Inertia::render('Events');
 })->name('events');
+
+Route::middleware('auth')->get('/posts', function () {
+    return Inertia::render('Posts');
+})->name('posts');
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
