@@ -4,6 +4,6 @@ import AppLayout from "@/Layouts/AppLayout.vue";
 </script>
 <template>
     <AppLayout>
-        Events
+        Posts
     </AppLayout>
 </template>
