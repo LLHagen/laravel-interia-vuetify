@@ -1,14 +1,19 @@
 <script setup>
-import HorizontalNavigation from "@/Jetstream/Navigation/HorizontalNavigation.vue";
-
+import Navigation from "@/Jetstream/Navigation/Navigation.vue";
 </script>
 <template>
     <v-app>
-        <div class="bg-gray-100">
+        <v-layout>
+            <Navigation />
 
-        <HorizontalNavigation></HorizontalNavigation>
-        <slot></slot>
-        </div>
+            <v-main style="height: 500px;">
+                <v-card-text>
+                    <v-container>
+                        <slot />
+                    </v-container>
+                </v-card-text>
+            </v-main>
+        </v-layout>
     </v-app>
 </template>
 
